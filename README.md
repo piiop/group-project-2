@@ -3,10 +3,10 @@
 ## Project Overview
 
 This project focuses on developing a machine learning model to predict whether a patient is likely to have diabetes based on various demographic and medical features. The primary goal is to build an accurate classification model that meets the performance benchmark of at least 75% accuracy, through the data extraction, cleaning, exploratory analysis, model training, and optimization.
- 
+
 ## Dataset
 
-The dataset used in this project is publicly available on [Kaggle](https://www.kaggle.com/datasets/priyamchoksi/100000-diabetes-clinical-dataset), titled "100000 Diabetes Clinical Dataset." It contains 100,000 clinical records of patients, including medical history, demographic information, and health indicators relevant to diabetes diagnosis.
+The dataset used in this project is publicly available on [Kaggle](https://www.kaggle.com/datasets/priyamchoksi/100000-diabetes-clinical-dataset), titled "100000 Diabetes Clinical Dataset." It contains 100,000 clinical records of patients, including medical history and demographic information relevant to diabetes diagnosis.
 
 - **Features**:
   - **year**: The year of data collection.
@@ -18,13 +18,13 @@ The dataset used in this project is publicly available on [Kaggle](https://www.k
   - **heart_disease**: Whether the patient has a history of heart disease.
   - **smoking_history**: Patient's smoking habits.
   - **bmi**: Body Mass Index.
-  - **hbA1c_level**: Hemoglobin A1C level, the average blood sugar levels over time, given as a percentage.
-  - **blood_glucose_level**: Blood glucose levels, is given at a specific moment in time, measured in milligrams per deciliter (mg/dL).
+  - **hbA1c_level**: Hemoglobin A1C level, average blood sugar levels over time, usually given as a percentage.
+  - **blood_glucose_level**: Blood glucose levels, is given at a specific moment in time, usually measured in milligrams per deciliter (mg/dL).
   - **diabetes**: Target variable (0: No diabetes, 1: Diabetes).
 
-  - **License**: The dataset is available under the [CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/), allowing others to remix, adapt, and build upon the data even for commercial purposes, as long as they credit the original creator and license their new creations under the same terms.
+**License**: The dataset is available under the [CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/), allowing others to remix, adapt, and build upon the data even for commercial purposes, as long as they credit the original creator and license their new creations under the same terms.
 
-  Priyam Choksi, as the owner of the kaggle account, declares that the dataset is released under MIT License.
+Priyam Choksi, as the owner of the kaggle account, declares that the dataset is released under MIT License.
 
 ## Data Preprocessing and Exploration
 
@@ -69,10 +69,6 @@ Given more time, the following improvements could be considered:
 - **Data augmentation**: Additional features or data from external sources could be incorporated to improve the model’s predictive power.
 - **Model exploration**: Other models such as XGBoost or neural networks could be explored for potentially better performance.
 - **Deployment**: The model could be deployed in a healthcare environment as a decision-support tool.
-
-## Licensing
-
-The dataset used in this project is publicly available on Kaggle under the **Creative Commons Attribution-ShareAlike 4.0 International License** (CC BY-SA 4.0). You can access the dataset at [Kaggle Dataset Link](https://www.kaggle.com/datasets/priyamchoksi/100000-diabetes-clinical-dataset).
 
 ## How to Run the Project
 
