@@ -22,7 +22,9 @@ The dataset used in this project is publicly available on [Kaggle](https://www.k
   - **blood_glucose_level**: Blood glucose levels, is given at a specific moment in time, usually measured in milligrams per deciliter (mg/dL).
   - **diabetes**: Target variable (0: No diabetes, 1: Diabetes).
 
-**License**: The dataset is available under the [CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/), allowing others to remix, adapt, and build upon the data even for commercial purposes, as long as they credit the original creator and license their new creations under the same terms.
+## License
+
+The dataset is available under the [CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/), allowing others to remix, adapt, and build upon the data even for commercial purposes, as long as they credit the original creator and license their new creations under the same terms.
 
 Priyam Choksi, as the owner of the kaggle account, declares that the dataset is released under MIT License.
 
