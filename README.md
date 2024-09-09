@@ -84,9 +84,13 @@ Given more time, the following improvements could be considered:
 - Python 3.x
 - Pandas
 - Matplotlib
-- Jupyter Notebook,......
+- Numpy
+- Seaborn
+- Sklearn
+- imblearn
+- Jupyter Notebook
 
-## Project's Contributors
+## Contributors
 
 - Michael Leston
 - Giselle Gomez
