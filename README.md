@@ -87,7 +87,7 @@ Given more time, the following improvements could be considered:
 - Numpy
 - Seaborn
 - Sklearn
-- imblearn
+- Imblearn
 - Jupyter Notebook
 
 ## Contributors
