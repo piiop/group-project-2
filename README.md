@@ -90,7 +90,7 @@ Successfully achieved the goal of built multiple models to predict diabetes with
 ## Future Work
 
 Given more time, the following improvements could be considered:
--  Explore more complex models like neural networks or continue to tune.
+- Explore more complex models like neural networks or continue to tune.
 - Use additional features or external datasets to improve prediction accuracy. More complex or real-life datasets.
 - Next Steps: Test the model on different populations to assess generalizability.
 
@@ -111,7 +111,7 @@ Given more time, the following improvements could be considered:
 - Seaborn
 - Sklearn
 - Imblearn
-- scipy
+- Scipy
 - Jupyter Notebook
 
 ## Contributors
