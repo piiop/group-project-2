@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project focuses on developing a machine learning model to predict whether a patient is likely to have diabetes based on various demographic and medical features. The primary goal is to build an accurate classification model that meets the performance benchmark of at least 75% accuracy, through the data extraction, cleaning, exploratory analysis, model training, and optimization.
+This project focuses on developing a machine learning model to predict whether a patient is likely to have diabetes based on various demographic and medical features. The main goal is to build an accurate classification model that meets the performance benchmark of at least 75% accuracy, through the data extraction, cleaning, exploratory analysis, model training, and optimization.
 
 ## Dataset
 
@@ -28,11 +28,15 @@ The dataset is available under the [CC BY-SA 4.0 License](https://creativecommon
 
 Priyam Choksi, as the owner of the kaggle account, declares that the dataset is released under MIT License.
 
-## Data Preprocessing and Exploration
+# Methodology
+
+### Data Preprocessing
 
 The data underwent a thorough cleaning process, including:
-- **Handling missing values**: There were no missing values in the dataset, so no imputation was needed.
-- **One-hot encoding**: Categorical variables such as gender, location, and smoking history were encoded using one-hot encoding to make them suitable for the machine learning model.
+- Checking for missing values.
+- Encoding of categorical variables.
+- Renaming columns for clarity.
+- Handling duplicates.
 
 ### Exploratory Data Analysis (EDA)
 
@@ -41,53 +45,73 @@ EDA was conducted to understand the distribution of variables and identify corre
 - Certain demographic factors such as age and smoking history also show a notable correlation with the target variable.
 - Visualizations such as histograms, correlation matrices, and box plots were used to highlight these trends.
 
-## Model Implementation
+### Models Selection
 
-### Model Selection
-
-A **Random Forest Classifier** was chosen for this task due to its robustness and ability to handle both categorical and numerical features effectively. The model was trained on 80% of the data, with 20% reserved for testing.
+- Logistic Regression
+- RandomForest
+- Decision Tree
+- LightGBM
+- XgBoost
+- AdaBoost
 
 ### Model Performance
 
-- **Accuracy**: The baseline model achieved an accuracy of [insert accuracy value].
+- **Accuracy**: Models achieved an accuracy over than 97%.
 - **Other Metrics**: Precision, recall, and F1-score were calculated to evaluate the model's performance further.
 
-## Model Optimization
+### Other Feature Engineering
+- Scaling numerical features like age and BMI to ensure they contribute equally to the model.
+- Check Medical Indicator Features based on medical threshold, like Blood Glucose Category.
+- Combining Risk Factors: heart Disease and Hypertension.
+- Regrouped similar values of Smoking History.
+- clustering for BMI, HbA1c level, and blood glucose level.
 
-To improve the model's performance, hyperparameter tuning was performed. Key optimizations included:
-- Adjusting the number of trees in the forest.
-- Modifying the depth of the trees.
-- Cross-validation techniques to assess model stability.
+### Model Optimization
+- Tested multiple models while comparing evaluation metrics.
+- Iterated through features to find the optimal feature set.
+- Applied weighting to LogReg model.
+- Applied SMOTE to all models.
+- Evaluation Metrics: Train/Test Accuracy, Recall, F1 Score, MCC, ROC-AUC, confusion matrix.
+- Key Metric: ROC-AUC.
+- Hyperparameter Tuning on best two models.
 
-After tuning, the model's accuracy improved to [insert improved accuracy], exceeding the project goal of 75%.
+## Scoring Metric Comparison
+- Logistic Regression (Full Feature) has the best overall performance with the highest accuracy (97%) and a strong balance between recall, F1, and MCC. Its high ROC-AUC score also indicates excellent discriminatory power.
+- LightGBM (Tuned) is slightly behind the Full Feature model in most metrics, but it's still very competitive.
+- Logistic Regression (Baseline) has strong accuracy, an excellent MCC, and a competitive F1 score, making it a solid choice despite being a baseline model.
+- Logistic Regression (Tuned), despite its high recall, struggles with precision (88%), as indicated by the low F1 score and MCC, which makes it less favorable unless recall is the primary concern for the project.
 
 ## Results and Findings
 
 The final model showed a high level of predictive accuracy for diabetes, with the most significant factors being age, BMI, HbA1c levels, and blood glucose levels. These findings suggest that machine learning models can be effectively used to assist in the early detection of diabetes based on easily measurable medical parameters.
 
+Successfully achieved the goal of built multiple models to predict diabetes with over 75% accuracy using this dataset. Strong performance by logistic regression model suggests a linear relationship between features and the target variable, also suggests low complexity in the dataset and the importance of scoring metric in tuning.
+
 ## Future Work
 
 Given more time, the following improvements could be considered:
-- **Data augmentation**: Additional features or data from external sources could be incorporated to improve the model’s predictive power.
-- **Model exploration**: Other models such as XGBoost or neural networks could be explored for potentially better performance.
-- **Deployment**: The model could be deployed in a healthcare environment as a decision-support tool.
+- Explore more complex models like neural networks or continue to tune.
+- Use additional features or external datasets to improve prediction accuracy. More complex or real-life datasets.
+- Next Steps: Test the model on different populations to assess generalizability.
 
 ## How to Run the Project
 
 1. Clone the repository.
-2. Ensure you have all the necessary dependencies installed (see below).
-3. Run the Jupyter notebook `analysis.ipynb` to perform data preprocessing, model training, and evaluation.
-4. Alternatively, you can run the Python script `train_model.py` to train and evaluate the model directly.
+2. Install the required dependencies listed below.
+3. Run the Jupyter notebook `analysis.ipynb` to perform the data preprocessing, EDA, visualization, and base-model test.
+4. Run the Jupyter notebook script `model testing.ipynb` for various models training, evaluations, hyperparameter tuning, and final model.
+5. Additional files and a folder with the visualizations summary are also available.
 
 ## Dependencies
 
-- Python 3.x
+- Python
 - Pandas
 - Matplotlib
 - Numpy
 - Seaborn
 - Sklearn
 - Imblearn
+- Scipy
 - Jupyter Notebook
 
 ## Contributors
@@ -97,5 +121,5 @@ Given more time, the following improvements could be considered:
 
 ## Acknowledgments
 
-We would like to thank our Instructor Joe Palaia and our Teaching Assistant Yuyang, also to our fellow classmates. To all of you, thank you for yor guidance and support throughout this course and the projects. 
+We would like to thank our Instructor Joe Palaia and our Teaching Assistant Yuyang Zhong, also to our fellow classmates. To all of you, thank you for yor guidance and support throughout this course and the projects. 
 
